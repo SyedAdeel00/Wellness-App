@@ -8,7 +8,7 @@ import Svg, {
   LinearGradient,
   Stop,
 } from "react-native-svg";
-const Image1 = (props) => (
+const CarouselOne = (props) => (
   <Svg
     width={320}
     height={125}
@@ -1187,4 +1187,4 @@ const Image1 = (props) => (
     </Defs>
   </Svg>
 );
-export default Image1;
+export default CarouselOne;

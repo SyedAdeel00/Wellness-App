@@ -11,7 +11,7 @@ import Svg, {
   Stop,
   Image,
 } from "react-native-svg";
-const Image2 = (props) => (
+const CarouselTwo = (props) => (
   <Svg
     width={340}
     height={125}
@@ -739,4 +739,4 @@ const Image2 = (props) => (
     </Defs>
   </Svg>
 );
-export default Image2;
+export default CarouselTwo;
