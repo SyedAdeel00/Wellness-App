@@ -20,7 +20,7 @@ const BottomTabNavigator = () => {
       <Tab.Navigator
         shifting={false}
         barStyle={styles.barStyle}
-        activeColor="#0000FF" 
+        activeColor="#1F78F1" 
         inactiveColor="#555"  
         screenOptions={({ route }) => ({
           tabBarLabelStyle: styles.tabLabelStyle,
@@ -34,7 +34,7 @@ const BottomTabNavigator = () => {
           options={{
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <Fontisto name="compass" size={24} color={focused ? '#FFFFFF' : color} />
+              <Fontisto name="compass" size={26} color={focused ? '#FFFFFF' : color} />
             ),
             tabBarLabel: 'Discover',
           }}
@@ -45,7 +45,7 @@ const BottomTabNavigator = () => {
           options={{
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <Octicons name="gift" size={24} color={focused ? '#FFFFFF' : color} />
+              <Octicons name="gift" size={26} color={focused ? '#FFFFFF' : color} />
             ),
             tabBarLabel: 'Benefit',
           }}
@@ -56,7 +56,7 @@ const BottomTabNavigator = () => {
           options={{
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <Foundation name="plus" size={24} color={focused ? '#FFFFFF' : color} />
+              <Foundation name="plus" size={26} color={focused ? '#FFFFFF' : color} />
             ),
             tabBarLabel: 'Report',
           }}
@@ -67,7 +67,7 @@ const BottomTabNavigator = () => {
           options={{
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <FontAwesome name="line-chart" size={24} color={focused ? '#FFFFFF' : color} />
+              <FontAwesome name="line-chart" size={26} color={focused ? '#FFFFFF' : color} />
             ),
             tabBarLabel: 'Track',
           }}
@@ -78,7 +78,7 @@ const BottomTabNavigator = () => {
           options={{
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <MaterialIcons name="window" size={24} color={focused ? '#FFFFFF' : color} />
+              <MaterialIcons name="window" size={26} color={focused ? '#FFFFFF' : color} />
             ),
             tabBarLabel: 'More',
           }}
@@ -107,13 +107,13 @@ const styles = StyleSheet.create({
   },
   tabItemStyle: {
     marginHorizontal: 10,
-    borderRadius: 10,
+    borderRadius: 1,
   },
   tabLabelStyle: {
-    fontSize: 15,
+    fontSize: 18,
   },
   tabIconStyle: {
-    padding: 10,
+    padding:10
   },
 });
 
