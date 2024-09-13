@@ -1,6 +1,6 @@
 import * as React from "react";
 import Svg, { Rect, Defs, Pattern, Use, Image } from "react-native-svg";
-const beWell = (props) => (
+const BeWell = (props) => (
   <Svg
     width={42}
     height={30}
@@ -37,4 +37,4 @@ const beWell = (props) => (
     </Defs>
   </Svg>
 );
-export default beWell;
+export default BeWell;

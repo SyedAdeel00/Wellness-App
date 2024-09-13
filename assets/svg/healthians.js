@@ -1,6 +1,6 @@
 import * as React from "react";
 import Svg, { Rect, Defs, Pattern, Use, Image } from "react-native-svg";
-const healthians = (props) => (
+const Healthians = (props) => (
   <Svg
     width={42}
     height={18}
@@ -32,4 +32,4 @@ const healthians = (props) => (
     </Defs>
   </Svg>
 );
-export default healthians;
+export default Healthians;

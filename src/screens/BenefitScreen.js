@@ -1,12 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import PagerView from 'react-native-pager-view';
-import CarouselOne from '../../assets/svg/CarouselOne';
-import CarouselTwo from '../../assets/svg/CarouselTwo';
+import IconP from 'react-native-vector-icons/Feather';
 import Diagnostics from '../../assets/svg/Diagnostics';
 import Pathology from '../../assets/svg/Pathology';
 import Welness from '../../assets/svg/Welness';
+import BeWell from '../../assets/svg/BeWell';
+import Max from '../../assets/svg/max';
+import Healthians from '../../assets/svg/Healthians';
+import Carousel from '../components/CarouselList';
 
 const BenefitScreen = ({ navigation }) => {
   const handleNavigate = (screen, params) => {
@@ -20,7 +22,7 @@ const BenefitScreen = ({ navigation }) => {
         <View style={styles.div}>
           <View style={styles.divRow}>
             <View style={styles.profileSection}>
-              <Icon name="account-circle" size={30} color="black" />
+              <IconP name="user" size={30} color="black" />
               <Text style={styles.username}>User Name</Text>
               <View style={styles.switchSection}>
                 <Text style={styles.switchName}>Switch</Text>
@@ -32,75 +34,67 @@ const BenefitScreen = ({ navigation }) => {
             </View>
           </View>
         </View>
-
-        {/* Div 2 */}
+        
         <View style={styles.div}>
-          <PagerView style={styles.carousel} initialPage={0}>
-            <View key="1" style={styles.carouselItem}>
-              <CarouselOne />
-            </View>
-            <View key="2" style={styles.carouselItem}>
-              <CarouselTwo />
-            </View>
-            <View key="3" style={styles.carouselItem}>
-              <CarouselOne />
-            </View>
-            <View key="4" style={styles.carouselItem}>
-              <CarouselTwo />
-            </View>
-          </PagerView>
+        <Carousel/>
         </View>
 
         {/* Div 3 */}
         <View style={styles.div}>
-  <View style={styles.header}>
-    <Text style={styles.heading}>Wellness Hub</Text>
-    <TouchableOpacity onPress={() => navigation.navigate('DetailScreen')}>
-  <Text style={styles.seeAll}>See All {'>'}</Text>
-</TouchableOpacity>
-  </View>
-    <View style={styles.itemsContainer}>
-      <TouchableOpacity style={styles.item} onPress={() => handleNavigate('DetailScreen', { type: 'Diagnostics' })}>
-        <View style={styles.itemBackground}>
-          <Diagnostics width={35} height={35} />
+          <View style={styles.header}>
+            <Text style={styles.heading}>Wellness Hub</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('DetailScreen')}>
+              <Text style={styles.seeAll}>See All {'>'}</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.itemsContainer}>
+            <TouchableOpacity style={styles.item} onPress={() => handleNavigate('DetailScreen', { type: 'Diagnostics' })}>
+              <View style={styles.itemBackground}>
+                <Diagnostics width={35} height={35} />
+              </View>
+              <Text style={{ fontWeight: '500', marginTop: 3 }}>Diagnostics</Text>
+              <Text style={{ fontSize: 12, marginTop: 5 }}>6 Offers</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.item} onPress={() => handleNavigate('DetailScreen', { type: 'Pathology' })}>
+              <View style={styles.itemBackground}>
+                <Pathology width={35} height={35} />
+              </View>
+              <Text style={{ fontWeight: '500', marginTop: 3 }}>Pathology</Text>
+              <Text style={{ fontSize: 12, marginTop: 5 }}>2 Offers</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.item} onPress={() => handleNavigate('DetailScreen', { type: 'Welness' })}>
+              <View style={styles.itemBackground}>
+                <Welness width={35} height={35} />
+              </View>
+              <Text style={{ fontWeight: '500', marginTop: 3 }}>Welness</Text>
+              <Text style={{ fontSize: 12, marginTop: 5 }}>3 Offers</Text>
+            </TouchableOpacity>
+          </View>
         </View>
-        <Text style={{fontWeight:'500',marginTop:3}}>Diagnostics</Text>
-        <Text style={{fontSize:12,marginTop:5}}> 6 Offers </Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.item} onPress={() => handleNavigate('DetailScreen', { type: 'Pathology' })}>
-        <View style={styles.itemBackground}>
-          <Pathology width={35} height={35} />
-        </View>
-        <Text style={{fontWeight:'500',marginTop:3}}>Pathology</Text>
-        <Text style={{fontSize:12,marginTop:5}}> 2 Offers </Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.item} onPress={() => handleNavigate('DetailScreen', { type: 'Welness' })}>
-        <View style={styles.itemBackground}>
-          <Welness width={35} height={35} />
-        </View>
-        <Text style={{fontWeight:'500',marginTop:3}}>Welness</Text>
-        <Text style={{fontSize:12,marginTop:5}}> 3 Offers </Text>
-      </TouchableOpacity>
-    </View>
-</View>
-
-
 
         {/* Div 4 */}
-        <View style={styles.div}>
-          <Text style={styles.heading}>Trusted Partner</Text>
-          <View style={styles.trustedPartner}>
-            <View style={styles.partnerItem}>
-              <View style={styles.partnerImage} />
-              <Text>Partner 1</Text>
-            </View>
-            <View style={styles.partnerItem}>
-              <View style={styles.partnerImage} />
-              <Text>Partner 2</Text>
-            </View>
-            <View style={styles.partnerItem}>
-              <View style={styles.partnerImage} />
-              <Text>Partner 3</Text>
+        <View style={styles.Trusteddiv}>
+          <View style={{ backgroundColor: '#e8e9eb' }}>
+            <Text style={styles.TrustedHeading}>Trusted Partner</Text>
+            <View style={styles.trustedPartner}>
+              <View style={styles.partnerItem}>
+                <View style={styles.partnerImage}>
+                  <BeWell width={60} height={60} />
+                </View>
+                <Text style={{ marginTop: 10, fontWeight: '500' }}>BeWell Hospital</Text>
+              </View>
+              <View style={styles.partnerItem}>
+                <View style={styles.partnerImage}>
+                  <Max width={60} height={60} />
+                </View>
+                <Text style={{ marginTop: 10, fontWeight: '500' }}>Max Healthcare</Text>
+              </View>
+              <View style={styles.partnerItem}>
+                <View style={styles.partnerImage}>
+                  <Healthians width={60} height={60} />
+                </View>
+                <Text style={{ marginTop: 10, fontWeight: '500' }}>Healthians</Text>
+              </View>
             </View>
           </View>
         </View>
@@ -120,20 +114,24 @@ const styles = StyleSheet.create({
   div: {
     marginVertical: 10,
   },
+  Trusteddiv:{
+    marginVertical: 10,
+  },
   divRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginTop:15,
   },
   profileSection: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: "#fff",
-    padding: 5,
+    padding: 10,
     borderRadius: 12,
   },
   switchSection: {
     backgroundColor: '#1F78F1',
-    padding: 12,
+    padding: 15,
     borderRadius: 16,
   },
   username: {
@@ -150,7 +148,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#fff',
-    padding: 10,
+    padding: 13,
     borderRadius: 12,
   },
   year: {
@@ -173,11 +171,18 @@ const styles = StyleSheet.create({
     bottom: 5,
   },
   heading: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: '500',
+  },
+  TrustedHeading:{
+    fontSize: 20,
+    fontWeight: '500',
+    marginLeft:20,
+    marginTop:15
   },
   seeAll: {
     color: '#1F78F1',
+    fontSize:16
   },
   itemsContainer: {
     flexDirection: 'row',
@@ -198,14 +203,30 @@ const styles = StyleSheet.create({
   trustedPartner: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    padding: 10,
+    borderRadius: 12,
+    marginBottom:15
   },
   partnerItem: {
     alignItems: 'center',
+    padding: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
   },
   partnerImage: {
-    width: 100,
-    height: 100,
-    backgroundColor: '#eee', 
+    width: 80,
+    height: 80,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
   },
 });
 
