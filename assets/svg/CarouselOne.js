@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Dimensions } from "react-native";
 import Svg, {
   Rect,
   G,
@@ -10,7 +11,7 @@ import Svg, {
 } from "react-native-svg";
 const CarouselOne = (props) => (
   <Svg
-    width={320}
+    width={Dimensions.get("window").width}
     height={125}
     viewBox="0 0 320 125"
     fill="none"

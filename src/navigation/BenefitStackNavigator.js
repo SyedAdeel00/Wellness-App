@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import BenefitScreen from '../screens/BenefitScreen';  // Correct import path
-import DetailScreen from '../screens/DetailScreen';
+import WellnessHub from '../screens/WellnessHub';
 
 const Stack = createStackNavigator();
 
@@ -14,8 +14,8 @@ const BenefitStackNavigator = () => {
         options={{ headerShown: false }}  
       />
       <Stack.Screen 
-        name="DetailScreen" 
-        component={DetailScreen} 
+        name="WellnessHub" 
+        component={WellnessHub} 
         // options={{ headerShown: false }}  
       />
     </Stack.Navigator>

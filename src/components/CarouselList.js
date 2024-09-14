@@ -19,16 +19,16 @@ const Carousel = () => {
         onPageSelected={handlePageSelected} 
       >
         <View key="1" style={styles.carouselItem}>
-          <CarouselOne />
+          <CarouselOne style={{alignSelf:'center'}}/>
         </View>
         <View key="2" style={styles.carouselItem}>
-          <CarouselTwo />
+          <CarouselTwo style={{alignSelf:'center'}}/>
         </View>
         <View key="3" style={styles.carouselItem}>
-          <CarouselOne />
+          <CarouselOne style={{alignSelf:'center'}}/>
         </View>
         <View key="4" style={styles.carouselItem}>
-          <CarouselTwo />
+          <CarouselTwo style={{alignSelf:'center'}}/>
         </View>
       </PagerView>
 
@@ -47,11 +47,15 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   carousel: {
-    height: 200,
+    // height: 200,
+    paddingVertical:  70,
+    // borderWidth:1
   },
   carouselItem: {
     width: '100%',
     height: '100%',
+    // borderWidth:1,
+    justifyContent:'center'
   },
   pagination: {
     flexDirection: 'row',

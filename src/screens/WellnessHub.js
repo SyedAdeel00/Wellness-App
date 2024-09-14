@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import Carousel from '../components/CarouselList'; 
 import TabNavigator from '../navigation/TabNavigator';
 
-const DetailScreen = () => {
+const WellnessHub = () => {
   return (
     <View style={styles.container}>
       <View style={styles.featuredSection}>
@@ -17,7 +17,7 @@ const DetailScreen = () => {
   );
 };
 
-export default DetailScreen;
+export default WellnessHub;
 
 const styles = StyleSheet.create({
   container: {

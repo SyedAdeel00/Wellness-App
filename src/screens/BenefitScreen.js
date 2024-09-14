@@ -43,26 +43,26 @@ const BenefitScreen = ({ navigation }) => {
         <View style={styles.div}>
           <View style={styles.header}>
             <Text style={styles.heading}>Wellness Hub</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('DetailScreen')}>
+            <TouchableOpacity onPress={() => navigation.navigate('WellnessHub')}>
               <Text style={styles.seeAll}>See All {'>'}</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.itemsContainer}>
-            <TouchableOpacity style={styles.item} onPress={() => handleNavigate('DetailScreen', { type: 'Diagnostics' })}>
+            <TouchableOpacity style={styles.item} onPress={() => handleNavigate('WellnessHub', { type: 'Diagnostics' })}>
               <View style={styles.itemBackground}>
                 <Diagnostics width={35} height={35} />
               </View>
               <Text style={{ fontWeight: '500', marginTop: 3 }}>Diagnostics</Text>
               <Text style={{ fontSize: 12, marginTop: 5 }}>6 Offers</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => handleNavigate('DetailScreen', { type: 'Pathology' })}>
+            <TouchableOpacity style={styles.item} onPress={() => handleNavigate('WellnessHub', { type: 'Pathology' })}>
               <View style={styles.itemBackground}>
                 <Pathology width={35} height={35} />
               </View>
               <Text style={{ fontWeight: '500', marginTop: 3 }}>Pathology</Text>
               <Text style={{ fontSize: 12, marginTop: 5 }}>2 Offers</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => handleNavigate('DetailScreen', { type: 'Welness' })}>
+            <TouchableOpacity style={styles.item} onPress={() => handleNavigate('WellnessHub', { type: 'Welness' })}>
               <View style={styles.itemBackground}>
                 <Welness width={35} height={35} />
               </View>
